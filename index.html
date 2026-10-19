@@ -1,1250 +1,1096 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc Mừng 20/10 - Gửi Bé thlinh Yêu Thương 💖</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        script: ['"Dancing Script"', 'cursive'],
-                    },
-                    colors: {
-                        rose: {
-                            50: '#fff1f2',
-                            100: '#ffe4e6',
-                            200: '#fecdd3',
-                            300: '#fda4af',
-                            400: '#fb7185',
-                            500: '#f43f5e',
-                            600: '#e11d48',
-                            700: '#be123c',
-                        }
-                    }
-                }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Chúc Mừng 20/10 — Gửi Bé thlinh ❤️</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rose: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              200: '#fecdd3',
+              300: '#fda4af',
+              400: '#fb7185',
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c',
+              800: '#9f1239',
+              900: '#881337',
             }
+          },
+          fontFamily: {
+            script: ['"Dancing Script"', 'cursive'],
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
         }
-    </script>
+      }
+    }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-    <style>
-        * {
-            user-select: none;
-            -webkit-tap-highlight-color: transparent;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: radial-gradient(circle at 50% 20%, #fff5f7 0%, #ffe4e8 45%, #fbcfe8 100%);
+      min-height: 100vh;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #4a1d2c;
+    }
 
-        body {
-            background: radial-gradient(circle at 50% 20%, #fff5f7 0%, #ffe4e8 45%, #fbcfe8 100%);
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-        }
+    /* Animated Mesh Glow */
+    .ambient-glow {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.65;
+      animation: floatGlow 12s infinite alternate ease-in-out;
+    }
+    .glow-1 {
+      width: 360px;
+      height: 360px;
+      background: #fda4af;
+      top: -80px;
+      left: -80px;
+    }
+    .glow-2 {
+      width: 420px;
+      height: 420px;
+      background: #f9a8d4;
+      bottom: -100px;
+      right: -80px;
+      animation-delay: -5s;
+    }
+    .glow-3 {
+      width: 280px;
+      height: 280px;
+      background: #fde047;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.25;
+    }
 
-        /* Animated Ambient Glow Blobs */
-        .ambient-blob {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(75px);
-            opacity: 0.55;
-            z-index: 0;
-            pointer-events: none;
-            animation: floatBlob 14s infinite alternate ease-in-out;
-        }
-        @keyframes floatBlob {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(35px, -35px) scale(1.12); }
-        }
+    @keyframes floatGlow {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(30px, 25px) scale(1.12); }
+    }
 
-        /* Heartbeat Animation */
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            15% { transform: scale(1.14); }
-            30% { transform: scale(0.96); }
-            45% { transform: scale(1.2); }
-            70% { transform: scale(1.03); }
-        }
-        .animate-heartbeat {
-            animation: heartbeat 2.1s infinite ease-in-out;
-        }
+    /* Heartbeat 3D Animation */
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      15% { transform: scale(1.16); }
+      30% { transform: scale(0.96); }
+      45% { transform: scale(1.22); }
+      70% { transform: scale(1.03); }
+    }
 
-        /* Pulse Ring Around Heart */
-        @keyframes pulseRing {
-            0% { transform: scale(0.85); opacity: 0.85; }
-            100% { transform: scale(2.1); opacity: 0; }
-        }
-        .pulse-ring::before,
-        .pulse-ring::after {
-            content: '';
-            position: absolute;
-            inset: -14px;
-            border-radius: 9999px;
-            border: 2px solid rgba(244, 63, 94, 0.5);
-            animation: pulseRing 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-            pointer-events: none;
-        }
-        .pulse-ring::after {
-            animation-delay: 1.25s;
-        }
+    @keyframes pulseRing {
+      0% {
+        transform: scale(0.85);
+        opacity: 0.85;
+      }
+      100% {
+        transform: scale(2.15);
+        opacity: 0;
+      }
+    }
 
-        /* Glassmorphism Card */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.84);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.92);
-            box-shadow: 0 25px 65px -15px rgba(225, 29, 72, 0.18), 0 0 30px rgba(255, 228, 230, 0.65);
-        }
+    .heart-btn-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+    }
 
-        /* Vinyl Spin */
-        @keyframes spinSlow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .spin-vinyl {
-            animation: spinSlow 6s linear infinite;
-            animation-play-state: paused;
-        }
-        .spin-vinyl.playing {
-            animation-play-state: running;
-        }
+    .pulse-ring {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(244,63,94,0.45) 0%, rgba(244,63,94,0) 70%);
+      border: 2px solid rgba(244, 63, 94, 0.5);
+      animation: pulseRing 2.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+      pointer-events: none;
+    }
+    .pulse-ring-2 {
+      animation-delay: 0.7s;
+    }
+    .pulse-ring-3 {
+      animation-delay: 1.4s;
+    }
 
-        /* Equalizer Bars */
-        @keyframes eqBar {
-            0%, 100% { height: 4px; }
-            50% { height: 15px; }
-        }
-        .eq-bar {
-            width: 3px;
-            background: linear-gradient(to top, #e11d48, #fb7185);
-            border-radius: 999px;
-            height: 4px;
-            transition: height 0.2s ease;
-        }
-        .playing .eq-bar-1 { animation: eqBar 0.7s infinite ease-in-out 0.1s; }
-        .playing .eq-bar-2 { animation: eqBar 0.55s infinite ease-in-out 0.25s; }
-        .playing .eq-bar-3 { animation: eqBar 0.8s infinite ease-in-out 0.4s; }
-        .playing .eq-bar-4 { animation: eqBar 0.65s infinite ease-in-out 0.15s; }
+    .heart-main {
+      animation: heartbeat 1.7s infinite ease-in-out;
+      filter: drop-shadow(0 18px 28px rgba(225, 29, 72, 0.42));
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .heart-btn-wrapper:hover .heart-main {
+      filter: drop-shadow(0 22px 35px rgba(225, 29, 72, 0.65));
+    }
+    .heart-btn-wrapper:active .heart-main {
+      transform: scale(0.88) !important;
+    }
 
-        /* Floating Musical Notes from Vinyl */
-        @keyframes floatNote {
-            0% { transform: translateY(0) scale(0.7) rotate(0deg); opacity: 0; }
-            30% { opacity: 0.95; }
-            100% { transform: translateY(-38px) translateX(-12px) scale(1.15) rotate(-18deg); opacity: 0; }
-        }
-        .music-note-float {
-            animation: floatNote 2.4s infinite ease-out;
-        }
+    /* Glassmorphism Card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      box-shadow:
+        0 25px 60px -15px rgba(190, 18, 60, 0.18),
+        0 0 0 1px rgba(254, 205, 211, 0.5) inset;
+    }
 
-        /* Smooth Reveal Transition */
-        .stage-transition {
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+    /* Letter Paper Lines */
+    .letter-paper {
+      background-color: #fffafb;
+      background-image: linear-gradient(transparent 95%, rgba(244, 63, 94, 0.1) 95%);
+      background-size: 100% 2.1rem;
+      box-shadow: inset 0 0 30px rgba(254, 205, 211, 0.35), 0 10px 30px rgba(190, 18, 60, 0.08);
+    }
 
-        /* Shimmer Text */
-        .shimmer-text {
-            background: linear-gradient(90deg, #be123c 0%, #f43f5e 50%, #9d174d 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmer 4s linear infinite;
-        }
-        @keyframes shimmer {
-            to { background-position: 200% center; }
-        }
+    /* Screen Transitions */
+    .screen-transition {
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .hidden-screen {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.92) translateY(20px);
+      position: absolute;
+      inset: 0;
+    }
+    .active-screen {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1) translateY(0);
+      position: relative;
+    }
 
-        /* Lyric Fade Transition */
-        .lyric-fade {
-            transition: opacity 0.45s ease, transform 0.45s ease;
-        }
-    </style>
+    /* Floating Sparkle */
+    @keyframes floatUpSlow {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    .float-badge {
+      animation: floatUpSlow 4s ease-in-out infinite;
+    }
+
+    /* Equalizer Bars */
+    @keyframes eqBar {
+      0%, 100% { height: 4px; }
+      50% { height: 15px; }
+    }
+    .eq-bar {
+      width: 3px;
+      background: #e11d48;
+      border-radius: 99px;
+      display: inline-block;
+      animation: eqBar 0.75s ease-in-out infinite;
+    }
+    .eq-bar:nth-child(2) { animation-delay: 0.2s; }
+    .eq-bar:nth-child(3) { animation-delay: 0.4s; }
+    .eq-bar:nth-child(4) { animation-delay: 0.1s; }
+    .eq-paused .eq-bar {
+      animation-play-state: paused !important;
+      height: 4px !important;
+    }
+
+    /* Spinning Vinyl Disc */
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .vinyl-spin {
+      animation: spinSlow 5.5s linear infinite;
+    }
+    .vinyl-paused {
+      animation-play-state: paused !important;
+    }
+
+    /* Floating Music Notes around player */
+    @keyframes floatNote {
+      0% {
+        opacity: 0;
+        transform: translateY(6px) scale(0.7) rotate(-10deg);
+      }
+      40% {
+        opacity: 0.95;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-28px) translateX(-14px) scale(1.15) rotate(18deg);
+      }
+    }
+    .floating-note {
+      position: absolute;
+      pointer-events: none;
+      color: #e11d48;
+      font-weight: bold;
+      animation: floatNote 2.4s infinite ease-out;
+    }
+
+    /* Custom Range Slider */
+    input[type="range"].audio-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    input[type="range"].audio-slider::-webkit-slider-runnable-track {
+      height: 6px;
+      border-radius: 999px;
+      background: #fecdd3;
+    }
+    input[type="range"].audio-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #e11d48;
+      margin-top: -4px;
+      box-shadow: 0 2px 6px rgba(225, 29, 72, 0.4);
+      transition: transform 0.15s ease;
+    }
+    input[type="range"].audio-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fff1f2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #fda4af;
+      border-radius: 10px;
+    }
+  </style>
 </head>
-<body class="text-slate-800 antialiased selection:bg-rose-200 selection:text-rose-900">
+<body class="relative select-none md:select-auto">
 
-    <!-- Ambient Decorative Background Blobs -->
-    <div class="ambient-blob w-80 h-80 bg-rose-300 top-[-40px] left-[-40px]"></div>
-    <div class="ambient-blob w-96 h-96 bg-pink-300 bottom-[-60px] right-[-40px]" style="animation-delay: -5s;"></div>
-    <div class="ambient-blob w-72 h-72 bg-amber-100 top-[35%] left-[40%]" style="animation-delay: -9s;"></div>
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
 
-    <!-- Falling Petals & Sparkles Canvas -->
-    <canvas id="petalsCanvas" class="fixed inset-0 pointer-events-none z-10"></canvas>
+  <!-- HTML5 DIRECT VOCAL AUDIO ELEMENT -->
+  <audio id="bgMusic" preload="auto" loop></audio>
 
-    <!-- Hidden Audio Element for Mode 1 (Direct MP3 Auto-Loader or Local Upload) -->
-    <audio id="bgAudioElement" preload="auto" loop crossorigin="anonymous"></audio>
+  <!-- Falling Petals & Hearts Canvas -->
+  <canvas id="petalCanvas" class="fixed inset-0 pointer-events-none z-10"></canvas>
 
-    <!-- Top Navigation & "Perfect - Shiki" Music Player -->
-    <header class="fixed top-0 left-0 right-0 z-40 px-4 py-3 sm:px-8 sm:py-4 flex items-center justify-between">
-        <!-- Date Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-rose-200/80 shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
-            <span class="text-xs sm:text-sm font-semibold text-rose-700 tracking-wide">20 • 10 • Phụ Nữ Việt Nam</span>
-        </div>
-
-        <!-- Vinyl Music Player Widget ("Perfect - Shiki") -->
-        <div class="relative">
-            <!-- Floating Music Notes when active -->
-            <div id="floatingNotes" class="hidden pointer-events-none absolute -top-3 left-3 text-rose-500 text-xs font-bold">
-                <span class="music-note-float inline-block">♪</span>
-                <span class="music-note-float inline-block ml-2" style="animation-delay: 1.1s;">♫</span>
-            </div>
-
-            <div class="flex items-center gap-1.5 bg-white/90 backdrop-blur-md border border-rose-200/90 rounded-full p-1 pr-2 shadow-md hover:shadow-lg transition-all">
-                <!-- Play / Pause Toggle Button -->
-                <button id="musicToggleBtn" onclick="toggleMusicPlayback()" class="flex items-center gap-2.5 pl-1.5 pr-2 py-1 rounded-full hover:bg-rose-50/80 transition" title="Bật / Tắt nhạc nền Perfect - Shiki">
-                    <!-- Spinning Vinyl Icon with Album Accent -->
-                    <div id="vinylDisc" class="spin-vinyl w-8 h-8 rounded-full bg-gradient-to-tr from-slate-900 via-slate-700 to-slate-900 flex items-center justify-center shadow-inner relative border border-rose-300">
-                        <div class="w-3 h-3 rounded-full bg-gradient-to-r from-rose-400 to-pink-500 flex items-center justify-center">
-                            <div class="w-1 h-1 rounded-full bg-white"></div>
-                        </div>
-                    </div>
-                    <!-- Track Name & Status -->
-                    <div class="text-left">
-                        <div id="musicStatusText" class="text-[11px] sm:text-xs font-bold text-rose-700 leading-tight max-w-[130px] sm:max-w-[175px] truncate">
-                            Perfect - Shiki (ft. Tyronee)
-                        </div>
-                        <div id="musicModeBadge" class="text-[9px] text-rose-400 font-medium leading-tight">
-                            'Lặng' EP • Chạm để phát
-                        </div>
-                    </div>
-                    <!-- Equalizer Bars -->
-                    <div id="eqContainer" class="flex items-end gap-[2px] h-4 px-1">
-                        <span class="eq-bar eq-bar-1"></span>
-                        <span class="eq-bar eq-bar-2"></span>
-                        <span class="eq-bar eq-bar-3"></span>
-                        <span class="eq-bar eq-bar-4"></span>
-                    </div>
-                </button>
-
-                <!-- Settings / Switch Mode Dropdown Button -->
-                <button onclick="toggleMusicMenu()" class="w-7 h-7 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-600 flex items-center justify-center text-xs transition" title="Tùy chọn chế độ nhạc Perfect - Shiki">
-                    <i class="fa-solid fa-sliders"></i>
-                </button>
-            </div>
-
-            <!-- Dropdown Popover for "Perfect - Shiki" Audio Modes -->
-            <div id="musicDropdown" class="hidden absolute right-0 mt-2 w-80 rounded-2xl bg-white/95 backdrop-blur-xl border border-rose-200 shadow-2xl p-4 z-50 text-left">
-                <div class="flex items-center justify-between mb-2.5 pb-2 border-b border-rose-100">
-                    <div>
-                        <span class="text-xs font-bold text-rose-800 uppercase tracking-wider flex items-center gap-1.5">
-                            <i class="fa-solid fa-compact-disc text-rose-500"></i> Perfect — Shiki (ft. Tyronee)
-                        </span>
-                        <p class="text-[10px] text-slate-400 mt-0.5">Album: 'Lặng' EP • Nhạc nền tặng bé thlinh</p>
-                    </div>
-                    <button onclick="toggleMusicMenu()" class="text-slate-400 hover:text-rose-500 text-xs">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-
-                <!-- 3 Playback Modes -->
-                <div class="space-y-1.5 mb-3">
-                    <button onclick="selectAudioMode('rnb')" id="modeBtn-rnb" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold bg-rose-100/90 text-rose-800 transition">
-                        <span class="flex items-center gap-2">
-                            <i class="fa-solid fa-wand-magic-sparkles text-rose-500"></i>
-                            <span>
-                                <strong class="block">R&B Rhodes & Music Box (Tự động)</strong>
-                                <span class="text-[10px] text-rose-600 font-normal">Hợp âm chuẩn Perfect (Dmaj7 - Bm7 - Em7 - Gmaj7)</span>
-                            </span>
-                        </span>
-                        <i class="fa-solid fa-check text-rose-600 mode-check"></i>
-                    </button>
-
-                    <button onclick="selectAudioMode('youtube')" id="modeBtn-youtube" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium hover:bg-rose-50 text-slate-700 transition">
-                        <span class="flex items-center gap-2">
-                            <i class="fa-brands fa-youtube text-red-500 text-sm"></i>
-                            <span>
-                                <strong class="block">Phát MV Gốc (YouTube Stream)</strong>
-                                <span class="text-[10px] text-slate-400 font-normal">Shiki - Perfect (ft. Tyronee) Official</span>
-                            </span>
-                        </span>
-                        <i class="fa-solid fa-check text-rose-600 hidden mode-check"></i>
-                    </button>
-
-                    <button onclick="selectAudioMode('mp3')" id="modeBtn-mp3" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium hover:bg-rose-50 text-slate-700 transition">
-                        <span class="flex items-center gap-2">
-                            <i class="fa-solid fa-file-audio text-amber-500"></i>
-                            <span>
-                                <strong class="block">File MP3 Trực Tiếp (perfect.mp3)</strong>
-                                <span id="mp3StatusSubtext" class="text-[10px] text-slate-400 font-normal">Tự động phát nếu có perfect.mp3 trên Git</span>
-                            </span>
-                        </span>
-                        <i class="fa-solid fa-check text-rose-600 hidden mode-check"></i>
-                    </button>
-                </div>
-
-                <!-- Upload Local MP3 Option -->
-                <div class="pt-2.5 border-t border-rose-100">
-                    <label class="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-r from-rose-50 to-pink-50 hover:from-rose-100 hover:to-pink-100 text-rose-700 font-semibold text-xs cursor-pointer transition border border-rose-200/80">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
-                        <span>Chọn file nhạc Perfect.mp3 từ máy</span>
-                        <input type="file" id="customAudioInput" accept="audio/*" class="hidden" onchange="loadCustomAudioFile(event)">
-                    </label>
-                    <p class="text-[10px] text-slate-400 mt-1.5 text-center leading-relaxed">
-                        💡 <strong>Mẹo GitHub:</strong> Nếu bạn tải thêm file <code class="text-rose-600 font-semibold">perfect.mp3</code> lên cùng thư mục với <code class="text-rose-600 font-semibold">index.html</code> trên GitHub, web sẽ tự động phát bản MP3 gốc ngay khi bé bấm vào trái tim!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Floating Mini YouTube MV Drawer (For Mode 2 Official YouTube Stream) -->
-    <div id="ytMiniDrawer" class="hidden fixed bottom-4 right-4 z-50 w-72 sm:w-80 rounded-2xl bg-white/95 backdrop-blur-xl border border-rose-200 shadow-2xl overflow-hidden transition-all">
-        <div class="flex items-center justify-between px-3 py-2 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-bold">
-            <span class="flex items-center gap-1.5 truncate">
-                <i class="fa-brands fa-youtube"></i> Shiki - Perfect (ft. Tyronee)
-            </span>
-            <div class="flex items-center gap-2">
-                <button onclick="minimizeYtDrawer()" class="hover:text-rose-200 transition" title="Thu nhỏ">
-                    <i id="ytToggleIcon" class="fa-solid fa-chevron-down"></i>
-                </button>
-                <button onclick="closeYtDrawer()" class="hover:text-rose-200 transition" title="Đóng MV & chuyển sang R&B Box">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-        </div>
-        <div id="ytPlayerWrapper" class="relative w-full aspect-video bg-slate-900">
-            <div id="ytIframePlaceholder" class="w-full h-full"></div>
-        </div>
-        <div class="px-3 py-1.5 bg-rose-50 text-[10px] text-rose-700 flex items-center justify-between">
-            <span>'Lặng' EP • Dành tặng bé thlinh</span>
-            <span class="font-semibold">🎵 Official Audio</span>
-        </div>
+  <!-- Top Floating Navigation & Direct Music Bar -->
+  <header class="fixed top-0 left-0 right-0 z-40 px-4 py-3 flex items-center justify-between max-w-5xl mx-auto">
+    <div class="flex items-center gap-2 bg-white/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-rose-200/80 shadow-sm">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+      <span class="text-xs sm:text-sm font-semibold text-rose-800 tracking-wide">20/10 • Gửi bé thlinh</span>
     </div>
 
-    <!-- Main Container -->
-    <main class="relative z-20 min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-12">
+    <!-- Top Right Mini Vinyl Control -->
+    <div class="relative flex items-center gap-2">
+      <!-- Floating musical notes when playing -->
+      <div id="musicNotesContainer" class="hidden">
+        <span class="floating-note text-xs -top-2 right-12" style="animation-delay: 0s;">♪</span>
+        <span class="floating-note text-sm -top-3 right-5" style="animation-delay: 0.8s;">♫</span>
+        <span class="floating-note text-xs -top-2 right-20" style="animation-delay: 1.5s;">♬</span>
+      </div>
 
-        <!-- ==========================================
-             STAGE 1: INTERACTIVE HEART LANDING SCREEN
-             ========================================== -->
-        <section id="stageHero" class="stage-transition w-full max-w-xl mx-auto text-center flex flex-col items-center justify-center py-6">
-            
-            <!-- Cute Crown / Tag -->
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100/90 border border-rose-200 text-rose-700 text-xs sm:text-sm font-semibold mb-5 shadow-sm">
-                <i class="fa-solid fa-crown text-amber-500"></i>
-                <span>Món quà nhỏ dành riêng cho công chúa</span>
-            </div>
-
-            <!-- Main Greeting Title -->
-            <h1 class="font-serif text-4xl sm:text-6xl font-bold text-slate-900 tracking-tight leading-tight mb-3">
-                Gửi <span class="shimmer-text font-script text-5xl sm:text-7xl px-1">bé thlinh</span>
-            </h1>
-
-            <p class="text-slate-600 text-sm sm:text-base max-w-md mx-auto mb-3 leading-relaxed">
-                Hôm nay là ngày <strong class="text-rose-600">20 tháng 10</strong>, có một lá thư nhỏ cùng giai điệu <strong class="text-rose-600">"Perfect — Shiki"</strong> đang đợi bé mở ra...
-            </p>
-
-            <!-- Song Badge Preview -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/75 border border-rose-200/80 text-[11px] text-rose-600 font-medium mb-9 shadow-sm">
-                <i class="fa-solid fa-music text-rose-400 animate-bounce"></i>
-                <span>Giai điệu chủ đề: <strong>Perfect - Shiki (ft. Tyronee)</strong></span>
-            </div>
-
-            <!-- Interactive 3D Glowing Heart Button -->
-            <div class="relative my-4 flex items-center justify-center">
-                <button id="openHeartBtn" onclick="openLoveLetter(event)" aria-label="Ấn vào trái tim để xem lời chúc"
-                    class="pulse-ring group relative w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-gradient-to-b from-rose-400 via-rose-500 to-rose-600 shadow-[0_20px_50px_rgba(225,29,72,0.45)] flex flex-col items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95 focus:outline-none">
-                    
-                    <!-- Inner Glossy Highlight -->
-                    <div class="absolute inset-2 rounded-full bg-gradient-to-tr from-transparent via-white/15 to-white/40 pointer-events-none"></div>
-
-                    <!-- Heart SVG Icon -->
-                    <div class="animate-heartbeat relative z-10 flex flex-col items-center">
-                        <svg class="w-16 h-16 sm:w-20 sm:h-20 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.2)]" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                        </svg>
-                        <span class="mt-1 text-[11px] sm:text-xs font-bold uppercase tracking-widest text-rose-50 bg-rose-800/35 px-2.5 py-0.5 rounded-full backdrop-blur-sm">
-                            Chạm vào đây
-                        </span>
-                    </div>
-                </button>
-            </div>
-
-            <!-- Instruction Prompt -->
-            <div class="mt-8 flex flex-col items-center gap-1.5">
-                <p class="text-xs sm:text-sm font-medium text-rose-600 flex items-center gap-1.5 animate-bounce">
-                    <i class="fa-solid fa-hand-pointer"></i>
-                    <span>Bé thlinh ấn vào trái tim để mở lời chúc & phát nhạc Perfect nhé!</span>
-                </p>
-                <span class="text-[11px] text-slate-400">✨ Đừng quên bật âm lượng điện thoại để nghe giai điệu dành riêng cho bé ✨</span>
-            </div>
-        </section>
-
-
-        <!-- ==========================================
-             STAGE 2: REVEALED LOVE LETTER & VOUCHERS
-             ========================================== -->
-        <section id="stageLetter" class="hidden opacity-0 translate-y-8 stage-transition w-full max-w-2xl mx-auto">
-            
-            <!-- Main Letter Card -->
-            <div class="glass-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
-                
-                <!-- Top Corner Floral / Ribbon Ornaments -->
-                <div class="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-bl from-rose-200/70 to-transparent rounded-full pointer-events-none"></div>
-                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-tr from-pink-200/70 to-transparent rounded-full pointer-events-none"></div>
-
-                <!-- Letter Header -->
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-5 mb-5 border-b border-rose-200/70">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-rose-500 block mb-1">
-                            Happy Vietnamese Women's Day 20/10
-                        </span>
-                        <h2 class="font-script text-3xl sm:text-4xl font-bold text-rose-700">
-                            Gửi bé thlinh xinh đẹp nhất! 🌸
-                        </h2>
-                    </div>
-                    <div class="inline-flex items-center gap-2 self-start sm:self-auto px-3 py-1.5 rounded-2xl bg-rose-50 border border-rose-200/80 text-rose-600 text-xs font-semibold">
-                        <i class="fa-solid fa-heart text-rose-500 animate-pulse"></i>
-                        <span>For thlinh only</span>
-                    </div>
-                </div>
-
-                <!-- Synchronized Floating Lyric & Song Story Banner ("Perfect - Shiki") -->
-                <div class="mb-6 rounded-2xl bg-gradient-to-r from-rose-50/95 via-pink-50/95 to-rose-50/95 border border-rose-200/80 p-3.5 sm:p-4 shadow-sm relative overflow-hidden">
-                    <div class="flex items-center justify-between gap-2 mb-1.5">
-                        <div class="flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-full bg-rose-500 text-white flex items-center justify-center text-[10px] shadow-sm">
-                                <i class="fa-solid fa-music"></i>
-                            </span>
-                            <span class="text-xs font-bold text-rose-800">
-                                Perfect — Shiki (ft. Tyronee) <span class="text-rose-400 font-normal">• 'Lặng' EP</span>
-                            </span>
-                        </div>
-                        <div class="flex items-center gap-1.5">
-                            <button onclick="prevLyricLine()" class="w-6 h-6 rounded-full hover:bg-rose-200/60 text-rose-600 flex items-center justify-center text-[10px] transition" title="Câu trước">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </button>
-                            <button onclick="nextLyricLine()" class="w-6 h-6 rounded-full hover:bg-rose-200/60 text-rose-600 flex items-center justify-center text-[10px] transition" title="Câu tiếp theo">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Dynamic Rotating Quote / Theme Line -->
-                    <p id="activeLyricText" class="lyric-fade text-xs sm:text-sm font-medium italic text-rose-700 leading-relaxed min-h-[2.5rem] flex items-center">
-                        "♪ Biết em tối qua anh đã mong nhớ, viết em lá thư tâm tư trong đó..." — Shiki (Perfect)
-                    </p>
-
-                    <div class="mt-2 pt-2 border-t border-rose-200/50 flex flex-wrap items-center justify-between gap-2 text-[10px] text-slate-500">
-                        <span>✨ Giai điệu R&B ngọt ngào viết tặng mảnh ghép hoàn hảo</span>
-                        <button onclick="selectAudioMode('youtube')" class="text-rose-600 hover:text-rose-800 font-semibold underline flex items-center gap-1">
-                            <i class="fa-brands fa-youtube text-red-500"></i> Mở MV Gốc YouTube
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Photo / Avatar Accent + Typewriter Letter Body -->
-                <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
-                    <div id="typewriterContent" class="space-y-3.5 min-h-[190px] font-medium text-slate-700">
-                        <!-- Content injected by smooth typewriter / fade -->
-                    </div>
-                </div>
-
-                <!-- Signature Area -->
-                <div class="mt-7 pt-5 border-t border-rose-200/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div>
-                        <p class="text-xs text-slate-500 italic">Thương gửi ngàn điều ngọt ngào nhất,</p>
-                        <p class="font-script text-2xl sm:text-3xl text-rose-600 font-bold mt-0.5">
-                            Người luôn yêu thương bé thlinh ❤️
-                        </p>
-                    </div>
-
-                    <!-- Interactive Action Buttons -->
-                    <div class="flex flex-wrap items-center gap-2.5 w-full sm:w-auto">
-                        <button onclick="triggerHeartShower()" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-semibold text-xs sm:text-sm shadow-md hover:shadow-lg active:scale-95 transition">
-                            <i class="fa-solid fa-heart-pulse"></i>
-                            <span>Thả ngàn tim cho bé</span>
-                        </button>
-                        <button onclick="replayLetter()" class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-full bg-white hover:bg-rose-50 text-rose-600 border border-rose-200 font-semibold text-xs sm:text-sm transition" title="Đóng thư để mở lại">
-                            <i class="fa-solid fa-rotate-left"></i>
-                            <span>Xem lại</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ==========================================
-                 SPECIAL 20/10 VOUCHERS FOR BÉ THLINH
-                 ========================================== -->
-            <div class="mt-6 glass-card rounded-3xl p-5 sm:p-7">
-                <div class="flex items-center justify-between mb-4">
-                    <div>
-                        <h3 class="text-base sm:text-lg font-bold text-slate-800 flex items-center gap-2">
-                            <i class="fa-solid fa-gift text-rose-500"></i>
-                            <span>Đặc Quyền 20/10 Dành Riêng Cho Bé thlinh</span>
-                        </h3>
-                        <p class="text-xs text-slate-500">Bé ấn vào từng thẻ để nhận đặc quyền vô thời hạn nhé!</p>
-                    </div>
-                    <span id="voucherCountBadge" class="px-2.5 py-1 rounded-full bg-rose-100 text-rose-700 font-bold text-xs">
-                        0/3 Đã nhận
-                    </span>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <!-- Voucher 1 -->
-                    <button onclick="claimVoucher(this, 'Voucher Trà Sữa & Đồ Ăn Ngon Full Topping')" class="voucher-card group text-left p-4 rounded-2xl bg-white/90 hover:bg-rose-50/90 border border-rose-200/80 shadow-sm hover:shadow-md transition-all relative overflow-hidden">
-                        <div class="w-9 h-9 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center mb-2.5 group-hover:scale-110 transition">
-                            <i class="fa-solid fa-mug-hot"></i>
-                        </div>
-                        <h4 class="font-bold text-sm text-slate-800">1 Chầu Trà Sữa & Ăn Ngon</h4>
-                        <p class="text-xs text-slate-500 mt-1">Bất cứ món gì bé thlinh thèm, chỉ cần ới là lên đường ngay!</p>
-                        <span class="voucher-status inline-block mt-3 text-[11px] font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-full border border-rose-200">
-                            Chạm để nhận quà →
-                        </span>
-                    </button>
-
-                    <!-- Voucher 2 -->
-                    <button onclick="claimVoucher(this, 'Voucher Nghe Bé Tâm Sự Đến 5 Giờ Sáng')" class="voucher-card group text-left p-4 rounded-2xl bg-white/90 hover:bg-rose-50/90 border border-rose-200/80 shadow-sm hover:shadow-md transition-all relative overflow-hidden">
-                        <div class="w-9 h-9 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center mb-2.5 group-hover:scale-110 transition">
-                            <i class="fa-solid fa-crown"></i>
-                        </div>
-                        <h4 class="font-bold text-sm text-slate-800">Chiều Chuộng 100%</h4>
-                        <p class="text-xs text-slate-500 mt-1">Luôn lắng nghe bé tâm sự, nhường bé thắng trong mọi cuộc tranh luận.</p>
-                        <span class="voucher-status inline-block mt-3 text-[11px] font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-full border border-rose-200">
-                            Chạm để nhận quà →
-                        </span>
-                    </button>
-
-                    <!-- Voucher 3 -->
-                    <button onclick="claimVoucher(this, 'Voucher Đi Đến Đâu Cũng Có Nhau')" class="voucher-card group text-left p-4 rounded-2xl bg-white/90 hover:bg-rose-50/90 border border-rose-200/80 shadow-sm hover:shadow-md transition-all relative overflow-hidden">
-                        <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center mb-2.5 group-hover:scale-110 transition">
-                            <i class="fa-solid fa-camera-retro"></i>
-                        </div>
-                        <h4 class="font-bold text-sm text-slate-800">Hẹn Hò & Chụp Ảnh Xinh</h4>
-                        <p class="text-xs text-slate-500 mt-1">Một buổi dạo phố lãng mạn cùng nhiếp ảnh gia riêng tận tâm.</p>
-                        <span class="voucher-status inline-block mt-3 text-[11px] font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-full border border-rose-200">
-                            Chạm để nhận quà →
-                        </span>
-                    </button>
-                </div>
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- Custom Toast Notification Box (No alert()) -->
-    <div id="toastMessage" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300">
-        <div class="px-5 py-3 rounded-full bg-slate-900/90 backdrop-blur-md text-white text-xs sm:text-sm font-medium shadow-xl flex items-center gap-2.5 border border-rose-400/30">
-            <span id="toastIcon" class="text-rose-400">💖</span>
-            <span id="toastText">Đã gửi ngàn trái tim đến bé thlinh!</span>
+      <!-- Play / Pause Pill Button -->
+      <button id="musicToggleBtn" onclick="toggleMusic()" class="flex items-center gap-2.5 bg-white/90 hover:bg-white backdrop-blur-md pl-2 pr-3.5 py-1.5 rounded-full border border-rose-200 shadow-md transition active:scale-95 group" title="Bật / Tắt nhạc nền">
+        <!-- Spinning Vinyl Icon -->
+        <div id="vinylDisc" class="w-7 h-7 rounded-full bg-gradient-to-tr from-stone-900 via-stone-700 to-stone-900 flex items-center justify-center shadow-inner border border-rose-300 vinyl-spin vinyl-paused relative">
+          <div class="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 border border-white"></div>
         </div>
+        <div id="eqContainer" class="flex items-end gap-0.5 h-3.5 eq-paused">
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+        </div>
+        <div class="text-left">
+          <p id="musicLabel" class="text-[11px] sm:text-xs font-bold text-rose-700 leading-tight max-w-[140px] truncate">Bật nhạc: Perfect 🎵</p>
+          <p id="musicSubLabel" class="text-[9px] text-rose-400 leading-none hidden sm:block">Nhạc có lời • Chạm để phát</p>
+        </div>
+      </button>
     </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="relative z-20 min-h-screen flex flex-col items-center justify-center px-4 py-20">
 
     <!-- ==========================================
-         JAVASCRIPT: "PERFECT - SHIKI" AUDIO ENGINE & UI
+         SCREEN 1: INTERACTIVE HEART LOCK SCREEN
          ========================================== -->
-    <script>
-        /* -----------------------------------------------------------
-           1. LYRIC / SONG STORY BANNER FOR "PERFECT - SHIKI"
-              (Short attributed quote + romantic song-inspired messages)
-           ----------------------------------------------------------- */
-        const perfectBannerLines = [
-            '"♪ Biết em tối qua anh đã mong nhớ, viết em lá thư tâm tư trong đó..." — Shiki (Perfect)',
-            '"♪ Mắt em ghé qua nhìn nụ cười anh, có lẽ em cũng mê anh từ lần gặp đó..." — Shiki (Perfect)',
-            '"♪ Because you deserve it all, babe!" — Dành trọn những điều tốt đẹp nhất cho bé thlinh 💖',
-            '✨ Cảm hứng từ "Perfect - Shiki": Từ những đêm thức trắng tâm sự đến mong ước đi đâu cũng có nhau.',
-            '🌸 Chúc bé thlinh 20/10 luôn rạng rỡ như đốm sáng dịu dàng và ngập tràn tiếng cười mỗi ngày!'
-        ];
-        let currentLyricIdx = 0;
-        let lyricTimer = null;
+    <section id="lockScreen" class="screen-transition active-screen w-full max-w-lg mx-auto text-center flex flex-col items-center justify-center my-auto">
+      
+      <!-- Decorative Date Pill -->
+      <div class="float-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-rose-100 via-pink-100 to-rose-100 border border-rose-200/90 shadow-sm mb-6">
+        <span class="text-base">🌸</span>
+        <span class="text-xs sm:text-sm font-semibold text-rose-700 uppercase tracking-widest">Happy Vietnamese Women's Day 20/10</span>
+        <span class="text-base">✨</span>
+      </div>
 
-        function updateLyricBannerDisplay() {
-            const el = document.getElementById('activeLyricText');
-            if (!el) return;
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(4px)';
-            setTimeout(() => {
-                el.textContent = perfectBannerLines[currentLyricIdx];
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            }, 260);
+      <!-- Main Greeting Title -->
+      <h1 class="font-serif text-3xl sm:text-5xl font-bold text-rose-950 leading-tight mb-3">
+        Món Quà Nhỏ Gửi Đến <br/>
+        <span class="font-script text-5xl sm:text-6xl bg-gradient-to-r from-rose-600 via-pink-600 to-rose-500 bg-clip-text text-transparent inline-block mt-2 py-1">
+          Bé thlinh
+        </span>
+      </h1>
+
+      <p class="text-rose-800/80 text-sm sm:text-base max-w-md mx-auto mb-8 leading-relaxed">
+        Hôm nay là ngày 20/10 — ngày tôn vinh những điều ngọt ngào và xinh đẹp nhất. Có một bức thư kèm giai điệu tình yêu có lời đã được chuẩn bị dành riêng cho <strong class="text-rose-700 font-semibold">thlinh</strong>...
+      </p>
+
+      <!-- Interactive Heart Trigger -->
+      <div class="my-5 relative flex flex-col items-center">
+        <div id="heartTrigger" onclick="unlockWish(event)" class="heart-btn-wrapper group" role="button" aria-label="Ấn vào trái tim để mở lời chúc">
+          <!-- Animated Concentric Rings -->
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring pulse-ring-2"></div>
+          <div class="pulse-ring pulse-ring-3"></div>
+
+          <!-- 3D Glossy SVG Heart -->
+          <div class="heart-main relative z-10 w-36 h-36 sm:w-40 sm:h-40 flex items-center justify-center">
+            <svg viewBox="0 0 200 200" class="w-full h-full overflow-visible">
+              <defs>
+                <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff758f" />
+                  <stop offset="45%" stop-color="#f43f5e" />
+                  <stop offset="100%" stop-color="#be123c" />
+                </linearGradient>
+                <radialGradient id="heartShine" cx="30%" cy="28%" r="40%">
+                  <stop offset="0%" stop-color="rgba(255,255,255,0.85)" />
+                  <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                </radialGradient>
+              </defs>
+              <!-- Heart Path -->
+              <path
+                d="M100 176 C100 176 22 124 22 68 C22 38 46 18 72 18 C88 18 96 27 100 35 C104 27 112 18 128 18 C154 18 178 38 178 68 C178 124 100 176 100 176 Z"
+                fill="url(#heartGrad)"
+                stroke="#fff1f2"
+                stroke-width="3"
+              />
+              <!-- Glossy Highlight -->
+              <ellipse cx="66" cy="54" rx="22" ry="12" transform="rotate(-28 66 54)" fill="url(#heartShine)" />
+              <!-- Inner text / icon -->
+              <text x="100" y="96" text-anchor="middle" fill="#ffffff" class="font-script text-2xl font-bold" style="font-size: 23px; text-shadow: 0 2px 6px rgba(136,19,55,0.5);">
+                thlinh
+              </text>
+              <text x="100" y="118" text-anchor="middle" fill="#ffe4e6" style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px;">
+                CHAM VÀO ĐÂY
+              </text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Instruction Callout -->
+        <div class="mt-8 inline-flex items-center gap-2 bg-white/85 backdrop-blur-md px-5 py-2.5 rounded-full shadow-md border border-rose-200 animate-bounce">
+          <span class="text-rose-500 text-lg">👆</span>
+          <span class="text-xs sm:text-sm font-semibold text-rose-800">Ấn vào trái tim để mở lời chúc & phát nhạc</span>
+        </div>
+      </div>
+
+      <!-- Progress / Multi-click fun meter -->
+      <p id="tapHint" class="text-xs text-rose-500/80 mt-2 italic">
+        ✨ Trái tim đang giữ bí mật ngày 20/10 kèm bản tình ca có lời ngọt ngào ✨
+      </p>
+    </section>
+
+
+    <!-- ==========================================
+         SCREEN 2: UNLOCKED ROMANTIC LANDING PAGE
+         ========================================== -->
+    <section id="wishScreen" class="screen-transition hidden-screen w-full max-w-3xl mx-auto">
+      
+      <!-- Main Revealed Glass Card -->
+      <div class="glass-card rounded-3xl p-5 sm:p-9 relative overflow-hidden">
+        
+        <!-- Corner Floral Ornaments -->
+        <div class="absolute -top-6 -right-6 w-28 h-28 bg-rose-200/50 rounded-full blur-xl pointer-events-none"></div>
+        <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-pink-200/50 rounded-full blur-xl pointer-events-none"></div>
+
+        <!-- Top Header Banner inside Card -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-5 mb-5 border-b border-rose-200/70">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center text-white text-2xl shadow-md shadow-rose-300">
+              🌷
+            </div>
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-rose-500 block">Happy Women's Day • 20.10</span>
+              <h2 class="font-serif text-xl sm:text-2xl font-bold text-rose-950">Gửi Bé thlinh Xinh Đẹp Nhất</h2>
+            </div>
+          </div>
+
+          <button onclick="showerLove()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-rose-500 hover:bg-rose-600 text-white text-xs sm:text-sm font-semibold shadow-md shadow-rose-300/70 transition active:scale-95">
+            <span>💖</span> Thả mưa tim cho thlinh
+          </button>
+        </div>
+
+        <!-- ========================================================
+             DIRECT HTML5 VOCAL AUDIO PLAYER & SONG SELECTOR (20/10)
+             ======================================================== -->
+        <div class="mb-6 bg-gradient-to-r from-rose-950 via-rose-900 to-pink-950 text-white rounded-2xl p-4 sm:p-5 shadow-lg border border-rose-700/50 relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-rose-500/20 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <div class="flex flex-col gap-3.5 relative z-10">
+            <!-- Top Row: Album Art + Song Info + Play/Pause + Volume -->
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3.5 min-w-0">
+                <!-- Spinning Disc Thumbnail -->
+                <div id="cardVinyl" onclick="toggleMusic()" class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-stone-950 via-stone-800 to-stone-900 p-1 border-2 border-rose-400/70 shadow-md flex items-center justify-center shrink-0 cursor-pointer vinyl-spin">
+                  <div class="w-5 h-5 rounded-full bg-gradient-to-r from-rose-400 to-pink-500 flex items-center justify-center text-[10px] font-bold text-white">
+                    ♥
+                  </div>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-rose-500/30 border border-rose-400/40 rounded-full text-rose-200">
+                      Vocal MP3 • 20/10
+                    </span>
+                    <span id="playerStatusBadge" class="text-[11px] text-emerald-300 font-medium flex items-center gap-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Đang phát nhạc có lời
+                    </span>
+                  </div>
+                  <h4 id="currentSongTitle" class="font-bold text-base sm:text-lg text-white truncate mt-0.5">
+                    Perfect — Ed Sheeran
+                  </h4>
+                  <p id="currentSongLyric" class="text-xs text-rose-200/90 italic truncate">
+                    "Baby, I'm dancing in the dark, with you between my arms..."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Direct Play / Pause & Next Controls -->
+              <div class="flex items-center gap-2 shrink-0">
+                <button onclick="prevTrack()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition active:scale-95" title="Bài trước">
+                  ⏮
+                </button>
+                <button id="mainPlayBtn" onclick="toggleMusic()" class="w-11 h-11 rounded-full bg-rose-500 hover:bg-rose-400 text-white flex items-center justify-center shadow-md shadow-rose-950/60 transition active:scale-95 text-base font-bold" title="Phát / Tạm dừng">
+                  ⏸
+                </button>
+                <button onclick="nextTrack()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition active:scale-95" title="Đổi bài tiếp theo">
+                  ⏭
+                </button>
+              </div>
+            </div>
+
+            <!-- Middle Row: Timeline Seek Bar & Duration -->
+            <div class="flex items-center gap-3">
+              <span id="currentTimeText" class="text-[11px] font-mono text-rose-200 w-9 text-right">0:00</span>
+              <input
+                id="seekSlider"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                step="0.1"
+                oninput="seekAudio(this.value)"
+                class="audio-slider flex-1"
+              />
+              <span id="durationText" class="text-[11px] font-mono text-rose-200 w-9">4:23</span>
+            </div>
+
+            <!-- Song Selector Pills (4 Romantic Vocal Songs for 20/10) -->
+            <div class="pt-2 border-t border-white/10">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] text-rose-200/90 font-medium">🎶 Đổi bài hát tình yêu 20/10 (Nhạc có lời):</span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-rose-300">🔊</span>
+                  <input
+                    id="volumeSlider"
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.05"
+                    value="0.85"
+                    oninput="changeVolume(this.value)"
+                    class="audio-slider w-16"
+                    title="Âm lượng"
+                  />
+                </div>
+              </div>
+              <div id="playlistButtons" class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+                <!-- Populated dynamically by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Romantic Letter Body -->
+        <div class="letter-paper rounded-2xl p-6 sm:p-8 border border-rose-100 relative mb-7">
+          <!-- Decorative Stamp -->
+          <div class="hidden sm:flex absolute top-5 right-5 w-16 h-20 rounded-lg border-2 border-dashed border-rose-300 bg-rose-50/70 flex-col items-center justify-center rotate-6 shadow-sm">
+            <span class="text-2xl">💌</span>
+            <span class="text-[9px] font-bold text-rose-600 tracking-tighter mt-0.5">20 • 10</span>
+          </div>
+
+          <p class="font-script text-3xl sm:text-4xl text-rose-600 mb-4">
+            Gửi bé thlinh thương mến,
+          </p>
+
+          <div class="space-y-4 text-rose-950/90 text-sm sm:text-base leading-relaxed font-medium">
+            <p>
+              Nhân ngày Phụ nữ Việt Nam <strong>20/10</strong>, chúc <span class="text-rose-600 font-bold">bé thlinh</span> luôn rạng rỡ như những đóa hoa mùa thu, luôn giữ trên môi nụ cười tươi tắn làm dịu lại cả thế giới xung quanh.
+            </p>
+            <p>
+              Giữa hàng vạn điều ồn ào ngoài kia, sự xuất hiện dịu dàng và đáng yêu của <strong>thlinh</strong> chính là điều tuyệt vời nhất. Giống như từng câu hát đang ngân vang trong bản nhạc này: trong mắt anh, em luôn thật xinh đẹp và hoàn hảo theo cách riêng của chính mình.
+            </p>
+            <p>
+              Chúc bé không chỉ riêng ngày hôm nay mà <strong>365 ngày trong năm</strong> đều được yêu chiều, nâng niu như một nàng công chúa nhỏ; mọi điều ước trong tim đều sớm thành hiện thực, chẳng bao giờ phải muộn phiền hay âu lo.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-rose-200/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div class="text-xs text-rose-500 italic flex items-center gap-1.5">
+              <span>🎶</span>
+              <span id="letterFooterSong">Nhạc nền: Perfect — Ed Sheeran (Bản thu âm có lời)</span>
+            </div>
+            <div class="text-right">
+              <p class="font-script text-2xl sm:text-3xl text-rose-700 font-bold">
+                Thương gửi bé thlinh ❤️
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Special 20/10 Interactive Vouchers for bé thlinh -->
+        <div class="mb-7">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-rose-900 flex items-center gap-2">
+              <span>🎁</span> Đặc Quyền 20/10 Dành Riêng Cho Bé thlinh
+            </h3>
+            <span class="text-xs text-rose-600 font-medium">Ấn vào thẻ để nhận quà ✨</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+            <!-- Card 1 -->
+            <div onclick="claimVoucher(this, 'Voucher Trà Sữa & Đồ Ăn Ngon Full Topping')" class="group cursor-pointer rounded-2xl bg-white/90 hover:bg-white p-4 border border-rose-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden">
+              <div class="flex items-start justify-between mb-2">
+                <span class="text-2xl p-2 rounded-xl bg-rose-100">🧋</span>
+                <span class="voucher-status text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-600">Chạm để nhận</span>
+              </div>
+              <h4 class="font-bold text-rose-950 text-sm sm:text-base mb-1">1 Chầu Trà Sữa & Đồ Ăn</h4>
+              <p class="text-xs text-rose-700/80 leading-relaxed">Bé thlinh chỉ cần lên đồ xinh đẹp, mọi món ngon bé thích cứ để đó lo hết!</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div onclick="claimVoucher(this, 'Đặc Quyền Bé thlinh Luôn Đúng 100%')" class="group cursor-pointer rounded-2xl bg-white/90 hover:bg-white p-4 border border-rose-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden">
+              <div class="flex items-start justify-between mb-2">
+                <span class="text-2xl p-2 rounded-xl bg-pink-100">👑</span>
+                <span class="voucher-status text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-600">Chạm để nhận</span>
+              </div>
+              <h4 class="font-bold text-rose-950 text-sm sm:text-base mb-1">Thẻ "thlinh Luôn Đúng"</h4>
+              <p class="text-xs text-rose-700/80 leading-relaxed">Hiệu lực vô thời hạn: Mọi điều bé thlinh nói đều là chân lý, được chiều chuộng 100%.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div onclick="claimVoucher(this, 'Một Buổi Đi Chơi & Chụp Ảnh Xinh Lung Linh')" class="group cursor-pointer rounded-2xl bg-white/90 hover:bg-white p-4 border border-rose-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden">
+              <div class="flex items-start justify-between mb-2">
+                <span class="text-2xl p-2 rounded-xl bg-amber-100">📸</span>
+                <span class="voucher-status text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-600">Chạm để nhận</span>
+              </div>
+              <h4 class="font-bold text-rose-950 text-sm sm:text-base mb-1">1 Buổi Hẹn Hò & Chụp Ảnh</h4>
+              <p class="text-xs text-rose-700/80 leading-relaxed">Có phó nháy riêng kiên nhẫn chụp đến khi nào bé thlinh ưng ý có ảnh đăng mới thôi.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compliment Generator / Interactive Sweet Words -->
+        <div class="rounded-2xl bg-gradient-to-r from-rose-100/90 via-pink-100/90 to-rose-100/90 p-4 sm:p-5 border border-rose-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3 text-center sm:text-left">
+            <div class="hidden sm:flex w-10 h-10 rounded-full bg-white items-center justify-center text-xl shadow-sm shrink-0">
+              💖
+            </div>
+            <div>
+              <span class="text-[11px] uppercase tracking-wider font-bold text-rose-500 block">Góc nhỏ ngọt ngào</span>
+              <p id="sweetQuote" class="text-sm sm:text-base font-semibold text-rose-900">
+                "Bé thlinh cười lên một cái là cả ngày hôm đó hóa mùa xuân!"
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="nextCompliment()" class="px-4 py-2 rounded-xl bg-white hover:bg-rose-50 text-rose-700 font-semibold text-xs sm:text-sm border border-rose-200 shadow-sm transition active:scale-95">
+              💬 Xem thêm lời nhắn
+            </button>
+            <button onclick="resetToHeart()" class="px-3 py-2 rounded-xl bg-rose-200/60 hover:bg-rose-200 text-rose-800 font-semibold text-xs sm:text-sm transition active:scale-95" title="Đóng thư lại">
+              🔒 Đóng thư
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toastBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300 transform translate-y-4">
+    <div class="bg-rose-950/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full shadow-xl border border-rose-400/30 flex items-center gap-2 text-xs sm:text-sm font-medium">
+      <span id="toastIcon">💖</span>
+      <span id="toastText">Đã gửi yêu thương tới bé thlinh!</span>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // =========================================================================
+    // 1. DIRECT HTML5 VOCAL MUSIC PLAYLIST (4 ROMANTIC VOCAL SONGS FOR 20/10)
+    // =========================================================================
+    const bgMusic = document.getElementById('bgMusic');
+    let isPlayingMusic = false;
+    let currentTrackIndex = 0;
+
+    // Danh sách 4 bài hát có lời (Full Vocal MP3) lãng mạn & trực tiếp từ Archive CDN
+    const vocalPlaylist = [
+      {
+        title: "Perfect — Ed Sheeran",
+        shortName: "Perfect",
+        lyric: '"Well, I found a girl, beautiful and sweet..."',
+        url: "https://archive.org/download/fave2/Ed%20Sheeran%20-%20Perfect.mp3"
+      },
+      {
+        title: "A Thousand Years — Christina Perri",
+        shortName: "A Thousand Years",
+        lyric: '"I have loved you for a thousand years, I\'ll love you for a thousand more..."',
+        url: "https://archive.org/download/FamousEnglishSongs/A%20Thousand%20Years.mp3"
+      },
+      {
+        title: "La Vie En Rose — French Love Song",
+        shortName: "La Vie En Rose",
+        lyric: '"Quand il me prend dans ses bras, Je vois la vie en rose..."',
+        url: "https://archive.org/download/FrenchLoveSongs/La%20Vie%20en%20Rose.mp3"
+      },
+      {
+        title: "My Love — Paul McCartney",
+        shortName: "My Love",
+        lyric: '"And when I go away, I know my heart can stay with my love..."',
+        url: "https://archive.org/download/romanticas70/Paul%20McCartney%20-%20My%20love.mp3"
+      }
+    ];
+
+    bgMusic.volume = 0.85;
+
+    function renderPlaylistButtons() {
+      const container = document.getElementById('playlistButtons');
+      container.innerHTML = vocalPlaylist.map((song, idx) => {
+        const active = idx === currentTrackIndex;
+        return `
+          <button
+            onclick="selectTrack(${idx}, true)"
+            class="px-2.5 py-1.5 rounded-xl text-[11px] font-semibold transition truncate flex items-center justify-center gap-1 border ${
+              active
+                ? 'bg-rose-500 text-white border-rose-300 shadow-sm'
+                : 'bg-white/10 hover:bg-white/20 text-rose-100 border-white/10'
+            }"
+          >
+            <span>${active ? '🎵' : '♪'}</span>
+            <span class="truncate">${song.shortName}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function loadTrack(index, autoPlay = false) {
+      currentTrackIndex = (index + vocalPlaylist.length) % vocalPlaylist.length;
+      const track = vocalPlaylist[currentTrackIndex];
+
+      bgMusic.src = track.url;
+      bgMusic.load();
+
+      document.getElementById('currentSongTitle').textContent = track.title;
+      document.getElementById('currentSongLyric').textContent = track.lyric;
+      document.getElementById('letterFooterSong').textContent = `Nhạc nền: ${track.title} (Nhạc có lời)`;
+      renderPlaylistButtons();
+
+      if (autoPlay) {
+        playDirectAudio();
+      }
+    }
+
+    function selectTrack(index, shouldPlay) {
+      loadTrack(index, shouldPlay);
+      showToast('🎶', `Đang phát: ${vocalPlaylist[currentTrackIndex].title}`);
+    }
+
+    function nextTrack() {
+      selectTrack(currentTrackIndex + 1, true);
+    }
+
+    function prevTrack() {
+      selectTrack(currentTrackIndex - 1, true);
+    }
+
+    // Tự động chuyển sang bài kế tiếp nếu 1 link bị lỗi mạng
+    bgMusic.addEventListener('error', () => {
+      console.warn('Đang chuyển sang nguồn nhạc dự phòng...');
+      const nextIdx = (currentTrackIndex + 1) % vocalPlaylist.length;
+      loadTrack(nextIdx, isPlayingMusic);
+    });
+
+    function formatTime(sec) {
+      if (!sec || isNaN(sec) || !isFinite(sec)) return '0:00';
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return `${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
+    bgMusic.addEventListener('loadedmetadata', () => {
+      document.getElementById('durationText').textContent = formatTime(bgMusic.duration);
+    });
+
+    bgMusic.addEventListener('timeupdate', () => {
+      const cur = bgMusic.currentTime;
+      const dur = bgMusic.duration;
+      document.getElementById('currentTimeText').textContent = formatTime(cur);
+      if (dur && isFinite(dur)) {
+        document.getElementById('seekSlider').value = (cur / dur) * 100;
+        document.getElementById('durationText').textContent = formatTime(dur);
+      }
+    });
+
+    bgMusic.addEventListener('play', () => {
+      isPlayingMusic = true;
+      updateMusicUI();
+    });
+
+    bgMusic.addEventListener('pause', () => {
+      isPlayingMusic = false;
+      updateMusicUI();
+    });
+
+    function seekAudio(percent) {
+      if (bgMusic.duration && isFinite(bgMusic.duration)) {
+        bgMusic.currentTime = (percent / 100) * bgMusic.duration;
+      }
+    }
+
+    function changeVolume(val) {
+      bgMusic.volume = parseFloat(val);
+    }
+
+    function playDirectAudio() {
+      const playPromise = bgMusic.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          isPlayingMusic = true;
+          updateMusicUI();
+        }).catch(() => {
+          isPlayingMusic = false;
+          updateMusicUI();
+        });
+      }
+    }
+
+    function pauseDirectAudio() {
+      bgMusic.pause();
+      isPlayingMusic = false;
+      updateMusicUI();
+    }
+
+    function toggleMusic() {
+      if (bgMusic.paused) {
+        playDirectAudio();
+        showToast('🎵', `Đang phát: ${vocalPlaylist[currentTrackIndex].title}`);
+      } else {
+        pauseDirectAudio();
+        showToast('🔇', 'Đã tạm dừng nhạc nền');
+      }
+    }
+
+    function updateMusicUI() {
+      const eq = document.getElementById('eqContainer');
+      const label = document.getElementById('musicLabel');
+      const subLabel = document.getElementById('musicSubLabel');
+      const vinyl = document.getElementById('vinylDisc');
+      const cardVinyl = document.getElementById('cardVinyl');
+      const notes = document.getElementById('musicNotesContainer');
+      const mainPlayBtn = document.getElementById('mainPlayBtn');
+      const statusBadge = document.getElementById('playerStatusBadge');
+      const currentSong = vocalPlaylist[currentTrackIndex];
+
+      if (isPlayingMusic && !bgMusic.paused) {
+        eq.classList.remove('eq-paused');
+        vinyl.classList.remove('vinyl-paused');
+        if (cardVinyl) cardVinyl.classList.remove('vinyl-paused');
+        notes.classList.remove('hidden');
+        label.textContent = `${currentSong.shortName} 🎵`;
+        if (subLabel) subLabel.textContent = 'Nhạc có lời • Đang phát';
+        if (mainPlayBtn) mainPlayBtn.textContent = '⏸';
+        if (statusBadge) {
+          statusBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Đang phát nhạc có lời';
+          statusBadge.className = 'text-[11px] text-emerald-300 font-medium flex items-center gap-1';
         }
-
-        function nextLyricLine() {
-            currentLyricIdx = (currentLyricIdx + 1) % perfectBannerLines.length;
-            updateLyricBannerDisplay();
+      } else {
+        eq.classList.add('eq-paused');
+        vinyl.classList.add('vinyl-paused');
+        if (cardVinyl) cardVinyl.classList.add('vinyl-paused');
+        notes.classList.add('hidden');
+        label.textContent = `Bật nhạc: ${currentSong.shortName}`;
+        if (subLabel) subLabel.textContent = 'Chạm để phát nhạc';
+        if (mainPlayBtn) mainPlayBtn.textContent = '▶';
+        if (statusBadge) {
+          statusBadge.innerHTML = '<span>⏸</span> Đang tạm dừng — Ấn Play để nghe';
+          statusBadge.className = 'text-[11px] text-amber-300 font-medium flex items-center gap-1';
         }
+      }
+    }
 
-        function prevLyricLine() {
-            currentLyricIdx = (currentLyricIdx - 1 + perfectBannerLines.length) % perfectBannerLines.length;
-            updateLyricBannerDisplay();
+    // Khởi tạo bài đầu tiên (Perfect) khi mở trang
+    loadTrack(0, false);
+
+    // =========================================================================
+    // 2. UNLOCK WISH INTERACTION (ON CLICKING THE HEART)
+    // =========================================================================
+    let isUnlocked = false;
+
+    function unlockWish(event) {
+      if (isUnlocked) return;
+      isUnlocked = true;
+
+      // Phát nhạc có lời ngay khi chạm vào trái tim
+      playDirectAudio();
+
+      // Hiệu ứng bung pháo hoa trái tim tại vị trí bấm
+      const rect = event.currentTarget.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      createHeartExplosion(centerX, centerY, 45);
+
+      const lockScreen = document.getElementById('lockScreen');
+      const wishScreen = document.getElementById('wishScreen');
+
+      lockScreen.style.transform = 'scale(1.08)';
+      lockScreen.style.opacity = '0';
+
+      setTimeout(() => {
+        lockScreen.classList.remove('active-screen');
+        lockScreen.classList.add('hidden-screen');
+
+        wishScreen.classList.remove('hidden-screen');
+        wishScreen.classList.add('active-screen');
+
+        createHeartExplosion(window.innerWidth / 2, window.innerHeight / 3, 35);
+        showToast('💌', `Chúc mừng 20/10 bé thlinh! Đang phát "${vocalPlaylist[currentTrackIndex].shortName}" ♪`);
+      }, 450);
+    }
+
+    function resetToHeart() {
+      isUnlocked = false;
+      const lockScreen = document.getElementById('lockScreen');
+      const wishScreen = document.getElementById('wishScreen');
+
+      wishScreen.classList.remove('active-screen');
+      wishScreen.classList.add('hidden-screen');
+
+      setTimeout(() => {
+        lockScreen.style.transform = '';
+        lockScreen.style.opacity = '';
+        lockScreen.classList.remove('hidden-screen');
+        lockScreen.classList.add('active-screen');
+      }, 300);
+    }
+
+    // =========================================================================
+    // 3. VOUCHER CLAIM & COMPLIMENTS FOR BÉ THLINH
+    // =========================================================================
+    function claimVoucher(cardEl, title) {
+      const badge = cardEl.querySelector('.voucher-status');
+      badge.textContent = 'Đã nhận ✓';
+      badge.className = 'voucher-status text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700';
+      cardEl.classList.add('ring-2', 'ring-rose-400', 'bg-rose-50/60');
+
+      const rect = cardEl.getBoundingClientRect();
+      createHeartExplosion(rect.left + rect.width / 2, rect.top + rect.height / 2, 22);
+      showToast('🎁', `Bé thlinh đã mở: ${title}!`);
+    }
+
+    const compliments = [
+      '"Bé thlinh cười lên một cái là cả ngày hôm đó hóa mùa xuân!"',
+      '"20/10 chúc bé thlinh luôn xinh đẹp, ăn ngon mặc đẹp và chẳng bao giờ phải buồn!"',
+      '"Giữa hàng ngàn bông hoa ngày 20/10, bé thlinh vẫn là bông hoa rực rỡ nhất!"',
+      '"Cảm ơn thlinh vì đã luôn dịu dàng, đáng yêu và mang lại thật nhiều năng lượng tích cực!"',
+      '"Chúc cô gái mang tên thlinh luôn được yêu thương trọn vẹn cả 365 ngày trong năm ❤️"'
+    ];
+    let quoteIndex = 0;
+
+    function nextCompliment() {
+      quoteIndex = (quoteIndex + 1) % compliments.length;
+      const quoteEl = document.getElementById('sweetQuote');
+      quoteEl.style.opacity = '0';
+      setTimeout(() => {
+        quoteEl.textContent = compliments[quoteIndex];
+        quoteEl.style.opacity = '1';
+      }, 180);
+      createHeartExplosion(window.innerWidth / 2, window.innerHeight - 120, 15);
+    }
+
+    function showerLove() {
+      for (let i = 0; i < 4; i++) {
+        setTimeout(() => {
+          const rx = Math.random() * (window.innerWidth * 0.7) + window.innerWidth * 0.15;
+          const ry = Math.random() * (window.innerHeight * 0.5) + window.innerHeight * 0.2;
+          createHeartExplosion(rx, ry, 25);
+        }, i * 200);
+      }
+      showToast('💖', 'Ngập tràn tim gửi tới bé thlinh nhân ngày 20/10!');
+    }
+
+    // Toast Helper
+    let toastTimeout;
+    function showToast(icon, text) {
+      const box = document.getElementById('toastBox');
+      document.getElementById('toastIcon').textContent = icon;
+      document.getElementById('toastText').textContent = text;
+
+      box.classList.remove('opacity-0', 'translate-y-4');
+      box.classList.add('opacity-100', 'translate-y-0');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        box.classList.remove('opacity-100', 'translate-y-0');
+        box.classList.add('opacity-0', 'translate-y-4');
+      }, 3200);
+    }
+
+    // =========================================================================
+    // 4. CANVAS FALLING PETALS & BURST HEARTS PARTICLE ENGINE
+    // =========================================================================
+    const canvas = document.getElementById('petalCanvas');
+    const ctx = canvas.getContext('2d');
+    let cw = (canvas.width = window.innerWidth);
+    let ch = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      cw = canvas.width = window.innerWidth;
+      ch = canvas.height = window.innerHeight;
+    });
+
+    const petals = [];
+    const burstParticles = [];
+    const petalColors = ['#fda4af', '#fb7185', '#f43f5e', '#f9a8d4', '#fecdd3'];
+
+    for (let i = 0; i < 32; i++) {
+      petals.push({
+        x: Math.random() * cw,
+        y: Math.random() * ch,
+        r: Math.random() * 6 + 5,
+        vy: Math.random() * 1.1 + 0.5,
+        vx: Math.random() * 0.8 - 0.4,
+        angle: Math.random() * Math.PI * 2,
+        spin: (Math.random() - 0.5) * 0.025,
+        color: petalColors[Math.floor(Math.random() * petalColors.length)],
+        opacity: Math.random() * 0.45 + 0.35
+      });
+    }
+
+    function createHeartExplosion(x, y, count = 30) {
+      for (let i = 0; i < count; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 6 + 2;
+        burstParticles.push({
+          x,
+          y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed - 2,
+          size: Math.random() * 10 + 7,
+          color: petalColors[Math.floor(Math.random() * petalColors.length)],
+          alpha: 1,
+          decay: Math.random() * 0.018 + 0.012,
+          rotation: Math.random() * Math.PI
+        });
+      }
+    }
+
+    function drawMiniHeart(ctx, x, y, size, color, alpha, rotation) {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rotation);
+      ctx.globalAlpha = Math.max(0, alpha);
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      const topCurveHeight = size * 0.3;
+      ctx.moveTo(0, topCurveHeight);
+      ctx.bezierCurveTo(0, 0, -size / 2, 0, -size / 2, topCurveHeight);
+      ctx.bezierCurveTo(-size / 2, (size + topCurveHeight) / 2, 0, (size + topCurveHeight) / 1.4, 0, size);
+      ctx.bezierCurveTo(0, (size + topCurveHeight) / 1.4, size / 2, (size + topCurveHeight) / 2, size / 2, topCurveHeight);
+      ctx.bezierCurveTo(size / 2, 0, 0, 0, 0, topCurveHeight);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function animateCanvas() {
+      ctx.clearRect(0, 0, cw, ch);
+
+      for (let p of petals) {
+        p.y += p.vy;
+        p.x += p.vx + Math.sin(p.angle) * 0.4;
+        p.angle += p.spin;
+
+        if (p.y > ch + 20) {
+          p.y = -15;
+          p.x = Math.random() * cw;
         }
+        if (p.x > cw + 20) p.x = -15;
+        if (p.x < -20) p.x = cw + 15;
 
-        function startLyricCarousel() {
-            if (lyricTimer) clearInterval(lyricTimer);
-            lyricTimer = setInterval(nextLyricLine, 5200);
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.angle);
+        ctx.globalAlpha = p.opacity;
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, p.r, p.r * 0.6, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      for (let i = burstParticles.length - 1; i >= 0; i--) {
+        const b = burstParticles[i];
+        b.x += b.vx;
+        b.y += b.vy;
+        b.vy += 0.12;
+        b.alpha -= b.decay;
+
+        if (b.alpha <= 0) {
+          burstParticles.splice(i, 1);
+        } else {
+          drawMiniHeart(ctx, b.x, b.y, b.size, b.color, b.alpha, b.rotation);
         }
+      }
 
-        /* -----------------------------------------------------------
-           2. TRIPLE-MODE AUDIO ENGINE FOR "PERFECT - SHIKI (ft. TYRONEE)"
-              - Mode A ('rnb'): Built-in Web Audio R&B Rhodes Electric Piano &
-                Music Box arranged on the Dmaj7 -> Bm7 -> Em7 -> Gmaj7/A7
-                progression of "Perfect - Shiki" (100% instant, zero block).
-              - Mode B ('mp3'): Auto-detects `./perfect.mp3` in the GitHub repo
-                or plays any custom uploaded `.mp3` file.
-              - Mode C ('youtube'): Official YouTube IFrame API player for
-                Shiki - Perfect (ft. Tyronee) ['Lặng' EP].
-           ----------------------------------------------------------- */
-        let audioCtx = null;
-        let reverbNode = null;
-        let isMusicPlaying = false;
-        let activeAudioMode = 'rnb'; // 'rnb' | 'mp3' | 'youtube'
-        let hasRepoMp3Available = false;
-        let customMp3Loaded = false;
-        let schedulerTimer = null;
-        let stepIndex = 0;
+      requestAnimationFrame(animateCanvas);
+    }
 
-        const bgAudio = document.getElementById('bgAudioElement');
-
-        // Probe if the user has uploaded `perfect.mp3` to their GitHub repository
-        async function checkRepoPerfectMp3() {
-            const candidateFiles = ['perfect.mp3', 'perfect-shiki.mp3'];
-            for (const file of candidateFiles) {
-                try {
-                    const res = await fetch(file, { method: 'HEAD' });
-                    if (res.ok) {
-                        bgAudio.src = file;
-                        hasRepoMp3Available = true;
-                        activeAudioMode = 'mp3';
-                        const sub = document.getElementById('mp3StatusSubtext');
-                        if (sub) sub.textContent = `Đã tìm thấy ${file} trên repo!`;
-                        updateModeCheckmarks();
-                        return;
-                    }
-                } catch (e) {
-                    // Ignore fetch error on file:// or missing file
-                }
-            }
-        }
-        checkRepoPerfectMp3();
-
-        // Exact R&B Chord Progression & Melody Voicing inspired by "Perfect - Shiki"
-        // Key of D Major / B Minor R&B Soul (Dmaj7 -> Bm7 -> Em7 -> Gmaj7 / A13)
-        const perfectRnbSequence = [
-            // Bar 1: Dmaj7 (Dreamy R&B Rhodes chord + melody)
-            { notes: [146.83, 220.00, 277.18, 329.63, 369.99, 587.33], dur: 0.48 }, // D3, A3, C#4, E4, F#4 + D5
-            { notes: [659.25], dur: 0.42 }, // E5
-            { notes: [739.99], dur: 0.48 }, // F#5
-            { notes: [587.33, 369.99], dur: 0.45 }, // D5 + F#4
-            { notes: [659.25], dur: 0.45 }, // E5
-            { notes: [587.33], dur: 0.55 }, // D5
-
-            // Bar 2: Bm7 (Warm neo-soul minor 7th)
-            { notes: [123.47, 246.94, 293.66, 369.99, 440.00, 587.33], dur: 0.48 }, // B2, B3, D4, F#4, A4 + D5
-            { notes: [554.37], dur: 0.42 }, // C#5
-            { notes: [493.88], dur: 0.48 }, // B4
-            { notes: [440.00, 293.66], dur: 0.45 }, // A4 + D4
-            { notes: [493.88], dur: 0.45 }, // B4
-            { notes: [587.33], dur: 0.55 }, // D5
-
-            // Bar 3: Em9 (Lush R&B 9th voicing)
-            { notes: [164.81, 246.94, 293.66, 392.00, 493.88, 739.99], dur: 0.48 }, // E3, B3, D4, G4, B4 + F#5
-            { notes: [659.25], dur: 0.42 }, // E5
-            { notes: [587.33], dur: 0.48 }, // D5
-            { notes: [493.88, 392.00], dur: 0.45 }, // B4 + G4
-            { notes: [587.33], dur: 0.45 }, // D5
-            { notes: [659.25], dur: 0.55 }, // E5
-
-            // Bar 4: Gmaj7 -> A13sus4 turnaround
-            { notes: [196.00, 293.66, 369.99, 493.88, 739.99], dur: 0.48 }, // G3, D4, F#4, B4 + F#5
-            { notes: [659.25], dur: 0.42 }, // E5
-            { notes: [587.33], dur: 0.45 }, // D5
-            { notes: [220.00, 329.63, 392.00, 554.37], dur: 0.48 }, // A7sus/A13: A3, E4, G4, C#5
-            { notes: [587.33], dur: 0.45 }, // D5
-            { notes: [659.25, 440.00], dur: 0.60 }  // E5 + A4
-        ];
-
-        function initWebAudio() {
-            if (audioCtx) return;
-            const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-            audioCtx = new AudioContextClass();
-
-            // Create warm Lofi Hall Reverb impulse response
-            const sampleRate = audioCtx.sampleRate;
-            const length = sampleRate * 2.4;
-            const impulse = audioCtx.createBuffer(2, length, sampleRate);
-            for (let ch = 0; ch < 2; ch++) {
-                const channelData = impulse.getChannelData(ch);
-                for (let i = 0; i < length; i++) {
-                    channelData[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / length, 2.6);
-                }
-            }
-            reverbNode = audioCtx.createConvolver();
-            reverbNode.buffer = impulse;
-
-            const masterGain = audioCtx.createGain();
-            masterGain.gain.value = 0.28;
-            reverbNode.connect(masterGain);
-            masterGain.connect(audioCtx.destination);
-        }
-
-        // Synthesize warm R&B Fender Rhodes + Music Box bell tone
-        function playRhodesNote(freq, duration = 2.0, isBassOrChord = false) {
-            if (!audioCtx || !isMusicPlaying || activeAudioMode !== 'rnb') return;
-            const now = audioCtx.currentTime;
-
-            // Main warm sine-triangle Rhodes body
-            const osc1 = audioCtx.createOscillator();
-            const osc2 = audioCtx.createOscillator();
-            const gainNode = audioCtx.createGain();
-
-            osc1.type = 'sine';
-            osc1.frequency.setValueAtTime(freq, now);
-
-            // Rhodes tine bell overtone
-            osc2.type = 'triangle';
-            osc2.frequency.setValueAtTime(freq * 2, now);
-
-            const osc2Gain = audioCtx.createGain();
-            osc2Gain.gain.setValueAtTime(isBassOrChord ? 0.04 : 0.11, now);
-            osc2Gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
-
-            // Smooth R&B envelope
-            const peakGain = isBassOrChord ? 0.085 : 0.15;
-            gainNode.gain.setValueAtTime(0.001, now);
-            gainNode.gain.linearRampToValueAtTime(peakGain, now + 0.025);
-            gainNode.gain.exponentialRampToValueAtTime(0.0008, now + duration);
-
-            osc1.connect(gainNode);
-            osc2.connect(osc2Gain);
-            osc2Gain.connect(gainNode);
-
-            gainNode.connect(audioCtx.destination);
-            if (reverbNode) gainNode.connect(reverbNode);
-
-            osc1.start(now);
-            osc2.start(now);
-            osc1.stop(now + duration);
-            osc2.stop(now + duration);
-        }
-
-        function scheduleNextRnbStep() {
-            if (!isMusicPlaying || activeAudioMode !== 'rnb') return;
-            const item = perfectRnbSequence[stepIndex % perfectRnbSequence.length];
-
-            item.notes.forEach((n, idx) => {
-                const isChordBacking = item.notes.length > 2 && idx < item.notes.length - 1;
-                setTimeout(() => {
-                    playRhodesNote(n, isChordBacking ? 2.4 : 1.7, isChordBacking);
-                }, idx * 22);
-            });
-
-            stepIndex++;
-            schedulerTimer = setTimeout(scheduleNextRnbStep, item.dur * 1000);
-        }
-
-        /* -----------------------------------------------------------
-           3. YOUTUBE IFRAME API LOADER FOR "PERFECT - SHIKI" MV
-           ----------------------------------------------------------- */
-        let ytPlayer = null;
-        let ytApiReady = false;
-        let ytDrawerMinimized = false;
-
-        function ensureYouTubeApiLoaded(callback) {
-            if (window.YT && window.YT.Player) {
-                ytApiReady = true;
-                callback();
-                return;
-            }
-            window.onYouTubeIframeAPIReady = function() {
-                ytApiReady = true;
-                callback();
-            };
-            if (!document.getElementById('ytApiScript')) {
-                const tag = document.createElement('script');
-                tag.id = 'ytApiScript';
-                tag.src = 'https://www.youtube.com/iframe_api';
-                document.head.appendChild(tag);
-            }
-        }
-
-        function startYouTubeMode() {
-            const drawer = document.getElementById('ytMiniDrawer');
-            drawer.classList.remove('hidden');
-
-            ensureYouTubeApiLoaded(() => {
-                if (ytPlayer && typeof ytPlayer.playVideo === 'function') {
-                    ytPlayer.playVideo();
-                    return;
-                }
-                ytPlayer = new YT.Player('ytIframePlaceholder', {
-                    width: '100%',
-                    height: '100%',
-                    videoId: 'U1usrHw-GvI', // Shiki - Perfect (ft. Tyronee) Official
-                    playerVars: {
-                        autoplay: 1,
-                        playsinline: 1,
-                        rel: 0,
-                        modestbranding: 1
-                    },
-                    events: {
-                        onReady: (event) => {
-                            event.target.playVideo();
-                            isMusicPlaying = true;
-                            updateMusicUI();
-                        },
-                        onError: () => {
-                            // Fallback video ID if primary restricted
-                            if (ytPlayer && ytPlayer.loadVideoById) {
-                                ytPlayer.loadVideoById('URMPrFP-CQA');
-                            }
-                        }
-                    }
-                });
-            });
-        }
-
-        function stopYouTubeMode() {
-            if (ytPlayer && typeof ytPlayer.pauseVideo === 'function') {
-                try { ytPlayer.pauseVideo(); } catch (e) {}
-            }
-        }
-
-        function minimizeYtDrawer() {
-            const wrapper = document.getElementById('ytPlayerWrapper');
-            const icon = document.getElementById('ytToggleIcon');
-            ytDrawerMinimized = !ytDrawerMinimized;
-            if (ytDrawerMinimized) {
-                wrapper.classList.add('hidden');
-                icon.className = 'fa-solid fa-chevron-up';
-            } else {
-                wrapper.classList.remove('hidden');
-                icon.className = 'fa-solid fa-chevron-down';
-            }
-        }
-
-        function closeYtDrawer() {
-            stopYouTubeMode();
-            document.getElementById('ytMiniDrawer').classList.add('hidden');
-            selectAudioMode('rnb');
-        }
-
-        /* -----------------------------------------------------------
-           4. MASTER MUSIC CONTROLLER
-           ----------------------------------------------------------- */
-        function startMusicPlayback() {
-            if (isMusicPlaying) return;
-            isMusicPlaying = true;
-
-            if (activeAudioMode === 'mp3') {
-                if (bgAudio.src) {
-                    bgAudio.play().then(() => {
-                        updateMusicUI();
-                    }).catch(() => {
-                        // Fallback to instant R&B Rhodes synth if MP3 missing
-                        activeAudioMode = 'rnb';
-                        updateModeCheckmarks();
-                        startRnbSynthEngine();
-                    });
-                } else {
-                    showToast('Chưa có file perfect.mp3, đang phát bản R&B Rhodes tự động!', '🎹');
-                    activeAudioMode = 'rnb';
-                    updateModeCheckmarks();
-                    startRnbSynthEngine();
-                }
-            } else if (activeAudioMode === 'youtube') {
-                startYouTubeMode();
-            } else {
-                startRnbSynthEngine();
-            }
-
-            updateMusicUI();
-        }
-
-        function startRnbSynthEngine() {
-            initWebAudio();
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
-            if (schedulerTimer) clearTimeout(schedulerTimer);
-            scheduleNextRnbStep();
-        }
-
-        function pauseMusicPlayback() {
-            isMusicPlaying = false;
-            if (schedulerTimer) {
-                clearTimeout(schedulerTimer);
-                schedulerTimer = null;
-            }
-            bgAudio.pause();
-            stopYouTubeMode();
-            updateMusicUI();
-        }
-
-        function toggleMusicPlayback() {
-            if (isMusicPlaying) {
-                pauseMusicPlayback();
-            } else {
-                startMusicPlayback();
-            }
-        }
-
-        function selectAudioMode(mode) {
-            // Stop existing streams cleanly
-            if (schedulerTimer) {
-                clearTimeout(schedulerTimer);
-                schedulerTimer = null;
-            }
-            bgAudio.pause();
-            stopYouTubeMode();
-
-            activeAudioMode = mode;
-            updateModeCheckmarks();
-            isMusicPlaying = false;
-
-            if (mode === 'youtube') {
-                startMusicPlayback();
-                showToast('Đang mở MV Perfect - Shiki (ft. Tyronee) 🎵', '🎬');
-            } else if (mode === 'mp3') {
-                if (!hasRepoMp3Available && !customMp3Loaded) {
-                    document.getElementById('customAudioInput').click();
-                    return;
-                }
-                startMusicPlayback();
-                showToast('Đang phát file MP3: Perfect - Shiki 🎧', '🎵');
-            } else {
-                document.getElementById('ytMiniDrawer').classList.add('hidden');
-                startMusicPlayback();
-                showToast('Đang phát: Perfect - Shiki (R&B Rhodes & Music Box) 🎹', '✨');
-            }
-            document.getElementById('musicDropdown').classList.add('hidden');
-        }
-
-        function updateModeCheckmarks() {
-            ['rnb', 'youtube', 'mp3'].forEach(m => {
-                const btn = document.getElementById('modeBtn-' + m);
-                if (!btn) return;
-                const check = btn.querySelector('.mode-check');
-                if (m === activeAudioMode) {
-                    btn.classList.add('bg-rose-100/90', 'text-rose-800', 'font-semibold');
-                    btn.classList.remove('text-slate-700');
-                    if (check) check.classList.remove('hidden');
-                } else {
-                    btn.classList.remove('bg-rose-100/90', 'text-rose-800', 'font-semibold');
-                    btn.classList.add('text-slate-700');
-                    if (check) check.classList.add('hidden');
-                }
-            });
-        }
-
-        function loadCustomAudioFile(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            if (schedulerTimer) {
-                clearTimeout(schedulerTimer);
-                schedulerTimer = null;
-            }
-            stopYouTubeMode();
-
-            const url = URL.createObjectURL(file);
-            bgAudio.src = url;
-            customMp3Loaded = true;
-            activeAudioMode = 'mp3';
-            isMusicPlaying = true;
-            bgAudio.play();
-
-            const sub = document.getElementById('mp3StatusSubtext');
-            if (sub) sub.textContent = 'Đang phát: ' + file.name;
-
-            updateModeCheckmarks();
-            updateMusicUI();
-            document.getElementById('musicDropdown').classList.add('hidden');
-            showToast('Đã tải nhạc: ' + file.name, '🎧');
-        }
-
-        function updateMusicUI() {
-            const vinyl = document.getElementById('vinylDisc');
-            const eq = document.getElementById('eqContainer');
-            const notes = document.getElementById('floatingNotes');
-            const badge = document.getElementById('musicModeBadge');
-
-            const modeLabels = {
-                rnb: "R&B Rhodes • 'Lặng' EP",
-                youtube: "YouTube MV • 'Lặng' EP",
-                mp3: "MP3 Audio • 'Lặng' EP"
-            };
-
-            if (isMusicPlaying) {
-                vinyl.classList.add('playing');
-                eq.classList.add('playing');
-                notes.classList.remove('hidden');
-                badge.textContent = modeLabels[activeAudioMode] || "Đang phát nhạc";
-            } else {
-                vinyl.classList.remove('playing');
-                eq.classList.remove('playing');
-                notes.classList.add('hidden');
-                badge.textContent = 'Đã tạm dừng • Chạm để phát';
-            }
-        }
-
-        function toggleMusicMenu() {
-            const menu = document.getElementById('musicDropdown');
-            menu.classList.toggle('hidden');
-        }
-
-        /* -----------------------------------------------------------
-           5. STAGE TRANSITION & TYPEWRITER LOVE LETTER FOR BÉ THLINH
-           ----------------------------------------------------------- */
-        const letterParagraphs = [
-            "Gửi <strong>bé thlinh</strong> đáng yêu,",
-            "Giống như giai điệu bài hát <em>\"Perfect\"</em> đang ngân vang — cảm ơn bé vì đã xuất hiện như một đốm sáng dịu dàng, mang theo nụ cười làm tan biến mọi mệt mỏi và khiến mỗi ngày trôi qua đều trở nên thật đặc biệt.",
-            "Nhân ngày Phụ nữ Việt Nam <strong>20/10</strong>, chúc công chúa nhỏ luôn giữ mãi đôi mắt biết cười, luôn xinh đẹp rạng rỡ, bình an và được yêu thương chiều chuộng hết mực — không chỉ riêng hôm nay mà là suốt 365 ngày trong năm.",
-            "Dù mùa đông bước qua những ngày xuân, mong rằng trên mọi chặng đường sắp tới của <strong>bé thlinh</strong> sẽ luôn ngập tràn hoa thơm, niềm vui và những điều ngọt ngào hoàn hảo nhất. <em>Because you deserve it all!</em> 💖"
-        ];
-
-        let typingTimeouts = [];
-
-        function openLoveLetter(event) {
-            // 1. Start playing "Perfect - Shiki" immediately on user heart interaction
-            startMusicPlayback();
-            startLyricCarousel();
-
-            // 2. Burst heart particles from button coordinates
-            if (event) {
-                const rect = event.currentTarget.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                spawnHeartBurst(centerX, centerY, 34);
-            }
-
-            // 3. Transition Stage 1 -> Stage 2
-            const stageHero = document.getElementById('stageHero');
-            const stageLetter = document.getElementById('stageLetter');
-
-            stageHero.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-
-            setTimeout(() => {
-                stageHero.classList.add('hidden');
-                stageLetter.classList.remove('hidden');
-
-                requestAnimationFrame(() => {
-                    stageLetter.classList.remove('opacity-0', 'translate-y-8');
-                    stageLetter.classList.add('opacity-100', 'translate-y-0');
-                });
-
-                renderLetterParagraphs();
-            }, 450);
-        }
-
-        function renderLetterParagraphs() {
-            const container = document.getElementById('typewriterContent');
-            container.innerHTML = '';
-            typingTimeouts.forEach(t => clearTimeout(t));
-            typingTimeouts = [];
-
-            letterParagraphs.forEach((htmlText, index) => {
-                const p = document.createElement('p');
-                p.className = 'opacity-0 translate-y-3 transition-all duration-700 ease-out leading-relaxed';
-                p.innerHTML = htmlText;
-                container.appendChild(p);
-
-                const t = setTimeout(() => {
-                    p.classList.remove('opacity-0', 'translate-y-3');
-                    p.classList.add('opacity-100', 'translate-y-0');
-                }, 250 + index * 650);
-                typingTimeouts.push(t);
-            });
-        }
-
-        function replayLetter() {
-            const stageHero = document.getElementById('stageHero');
-            const stageLetter = document.getElementById('stageLetter');
-
-            stageLetter.classList.add('opacity-0', 'translate-y-8');
-            setTimeout(() => {
-                stageLetter.classList.add('hidden');
-                stageHero.classList.remove('hidden', 'opacity-0', 'scale-95', 'pointer-events-none');
-            }, 450);
-        }
-
-        /* -----------------------------------------------------------
-           6. INTERACTIVE VOUCHERS & HEART SHOWER
-           ----------------------------------------------------------- */
-        let claimedCount = 0;
-
-        function claimVoucher(buttonEl, voucherTitle) {
-            if (buttonEl.dataset.claimed === 'true') {
-                showToast('Bé thlinh đã lưu "' + voucherTitle + '" rồi nha!', '🌸');
-                return;
-            }
-            buttonEl.dataset.claimed = 'true';
-            claimedCount++;
-
-            buttonEl.classList.remove('bg-white/90');
-            buttonEl.classList.add('bg-gradient-to-br', 'from-rose-50', 'to-pink-100/90', 'border-rose-400');
-
-            const statusBadge = buttonEl.querySelector('.voucher-status');
-            statusBadge.innerHTML = '<i class="fa-solid fa-circle-check mr-1"></i> Đã nhận đặc quyền';
-            statusBadge.className = 'voucher-status inline-block mt-3 text-[11px] font-bold text-white bg-rose-500 px-2.5 py-1 rounded-full shadow-sm';
-
-            document.getElementById('voucherCountBadge').textContent = `${claimedCount}/3 Đã nhận`;
-
-            const rect = buttonEl.getBoundingClientRect();
-            spawnHeartBurst(rect.left + rect.width / 2, rect.top + rect.height / 2, 18);
-            showToast('Bé thlinh đã nhận: ' + voucherTitle + ' 🎁', '💖');
-        }
-
-        const sweetNotesForThlinh = [
-            "Chúc bé thlinh 20/10 ngập tràn niềm vui và tiếng cười! 🥰",
-            "♪ Because you deserve it all, babe! — Perfect (Shiki) ✨",
-            "Gửi ngàn cái ôm ấm áp nhất đến công chúa thlinh! 🌸",
-            "Hôm nay và mọi ngày, bé thlinh luôn là tuyệt vời nhất! 💖"
-        ];
-        let noteIdx = 0;
-
-        function triggerHeartShower() {
-            spawnHeartBurst(window.innerWidth / 2, window.innerHeight * 0.65, 36);
-            showToast(sweetNotesForThlinh[noteIdx % sweetNotesForThlinh.length], '💘');
-            noteIdx++;
-        }
-
-        let toastTimeout = null;
-        function showToast(message, icon = '💖') {
-            const toast = document.getElementById('toastMessage');
-            document.getElementById('toastText').textContent = message;
-            document.getElementById('toastIcon').textContent = icon;
-
-            toast.classList.remove('opacity-0', 'translate-y-4');
-            toast.classList.add('opacity-100', 'translate-y-0');
-
-            if (toastTimeout) clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => {
-                toast.classList.remove('opacity-100', 'translate-y-0');
-                toast.classList.add('opacity-0', 'translate-y-4');
-            }, 3400);
-        }
-
-        /* -----------------------------------------------------------
-           7. CANVAS PETALS & INTERACTIVE HEART PARTICLE SYSTEM
-           ----------------------------------------------------------- */
-        const canvas = document.getElementById('petalsCanvas');
-        const ctx = canvas.getContext('2d');
-        let petals = [];
-        let burstParticles = [];
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        class Petal {
-            constructor() {
-                this.reset(true);
-            }
-            reset(initial = false) {
-                this.x = Math.random() * canvas.width;
-                this.y = initial ? Math.random() * canvas.height : -20;
-                this.size = 6 + Math.random() * 8;
-                this.speedY = 0.7 + Math.random() * 1.1;
-                this.speedX = -0.4 + Math.random() * 0.8;
-                this.angle = Math.random() * Math.PI * 2;
-                this.spin = (Math.random() - 0.5) * 0.025;
-                this.opacity = 0.35 + Math.random() * 0.45;
-                const colors = ['#fda4af', '#fb7185', '#f9a8d4', '#fecdd3'];
-                this.color = colors[Math.floor(Math.random() * colors.length)];
-            }
-            update() {
-                this.y += this.speedY;
-                this.x += this.speedX + Math.sin(this.y * 0.012) * 0.4;
-                this.angle += this.spin;
-                if (this.y > canvas.height + 25) {
-                    this.reset(false);
-                }
-            }
-            draw() {
-                ctx.save();
-                ctx.translate(this.x, this.y);
-                ctx.rotate(this.angle);
-                ctx.globalAlpha = this.opacity;
-                ctx.fillStyle = this.color;
-                ctx.beginPath();
-                ctx.moveTo(0, 0);
-                ctx.bezierCurveTo(this.size / 2, -this.size / 2, this.size, this.size / 3, 0, this.size);
-                ctx.bezierCurveTo(-this.size, this.size / 3, -this.size / 2, -this.size / 2, 0, 0);
-                ctx.fill();
-                ctx.restore();
-            }
-        }
-
-        function spawnHeartBurst(x, y, count = 24) {
-            const colors = ['#e11d48', '#f43f5e', '#fb7185', '#ec4899', '#f59e0b'];
-            for (let i = 0; i < count; i++) {
-                const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.5;
-                const speed = 2.5 + Math.random() * 6.5;
-                burstParticles.push({
-                    x,
-                    y,
-                    vx: Math.cos(angle) * speed,
-                    vy: Math.sin(angle) * speed - 2.2,
-                    size: 7 + Math.random() * 8,
-                    alpha: 1,
-                    color: colors[Math.floor(Math.random() * colors.length)],
-                    rotation: (Math.random() - 0.5) * 0.6
-                });
-            }
-        }
-
-        function drawMiniHeart(x, y, size, color, alpha, rotation) {
-            ctx.save();
-            ctx.translate(x, y);
-            ctx.rotate(rotation);
-            ctx.globalAlpha = Math.max(0, alpha);
-            ctx.fillStyle = color;
-            ctx.beginPath();
-            const topCurveHeight = size * 0.3;
-            ctx.moveTo(0, topCurveHeight);
-            ctx.bezierCurveTo(0, 0, -size / 2, 0, -size / 2, topCurveHeight);
-            ctx.bezierCurveTo(-size / 2, (size + topCurveHeight) / 2, 0, (size + topCurveHeight) / 1.4, 0, size);
-            ctx.bezierCurveTo(0, (size + topCurveHeight) / 1.4, size / 2, (size + topCurveHeight) / 2, size / 2, topCurveHeight);
-            ctx.bezierCurveTo(size / 2, 0, 0, 0, 0, topCurveHeight);
-            ctx.fill();
-            ctx.restore();
-        }
-
-        for (let i = 0; i < 28; i++) {
-            petals.push(new Petal());
-        }
-
-        function animateCanvas() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            petals.forEach(p => {
-                p.update();
-                p.draw();
-            });
-
-            for (let i = burstParticles.length - 1; i >= 0; i--) {
-                const b = burstParticles[i];
-                b.x += b.vx;
-                b.y += b.vy;
-                b.vy += 0.14; // gentle gravity
-                b.alpha -= 0.016;
-                drawMiniHeart(b.x, b.y, b.size, b.color, b.alpha, b.rotation);
-                if (b.alpha <= 0) {
-                    burstParticles.splice(i, 1);
-                }
-            }
-
-            requestAnimationFrame(animateCanvas);
-        }
-
-        window.onload = function() {
-            animateCanvas();
-        };
-    </script>
+    animateCanvas();
+  </script>
 </body>
 </html>
